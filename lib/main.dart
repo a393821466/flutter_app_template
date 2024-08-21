@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_shop_commerce_getx_learn/common/index.dart';
+import 'package:flutter_shop_commerce_getx_learn/global.dart';
 
-void main() {
+void main() async {
+  await Global.init();
   runApp(const MyApp());
 }
 

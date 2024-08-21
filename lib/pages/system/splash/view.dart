@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_shop_commerce_getx_learn/common/index.dart';
 
 import 'index.dart';
 
 class SplashPage extends GetView<SplashController> {
   const SplashPage({super.key});
-
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("SplashPage"),
+    final version = ConfigService.to.version;
+    return Center(
+      child: Text(version),
     );
   }
 
