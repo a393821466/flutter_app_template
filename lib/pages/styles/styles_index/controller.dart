@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:flutter_shop_commerce_getx_learn/common/index.dart';
 
 class StylesIndexController extends GetxController {
   StylesIndexController();
@@ -7,7 +8,17 @@ class StylesIndexController extends GetxController {
     update(["styles_index"]);
   }
 
-  void onTap() {}
+  // 多语言
+  onLanguageSelected() {
+    var en = Translation.supportedLocales[0];
+    var zh = Translation.supportedLocales[1];
+
+    ConfigService.to.onLocaleUpdate(
+        ConfigService.to.locale.toLanguageTag() == en.toLanguageTag()
+            ? zh
+            : en);
+    update(["styles_index"]);
+  }
 
   // @override
   // void onInit() {

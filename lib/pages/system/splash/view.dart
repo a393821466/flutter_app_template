@@ -6,12 +6,16 @@ import 'index.dart';
 
 class SplashPage extends GetView<SplashController> {
   const SplashPage({super.key});
+
   // 主视图
   Widget _buildView() {
     final version = ConfigService.to.version;
     return Center(
-      child: Text(version),
-    );
+        child: ElevatedButton(
+            onPressed: () {
+              Get.toNamed('/styles_styles_index');
+            },
+            child: Text('按钮')));
   }
 
   @override
