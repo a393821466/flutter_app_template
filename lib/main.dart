@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_shop_commerce_getx_learn/common/index.dart';
 import 'package:flutter_shop_commerce_getx_learn/global.dart';
+import 'package:flutter_shop_commerce_getx_learn/common/style/theme.dart';
 import 'package:flutter_shop_commerce_getx_learn/common/i18n/translation.dart';
 
 void main() async {
@@ -16,7 +17,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(appBarTheme: const AppBarTheme(color: Colors.lightBlue)),
+      // 样式
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      // 主题
+      themeMode:
+          ConfigService.to.isDarkModel ? ThemeMode.dark : ThemeMode.light,
       // 路由
       initialRoute: RouteNames.systemSplash,
       getPages: RoutePages.list,
