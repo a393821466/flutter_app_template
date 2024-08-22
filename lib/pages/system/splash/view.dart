@@ -13,7 +13,7 @@ class SplashPage extends GetView<SplashController> {
     return Center(
         child: ElevatedButton(
             onPressed: () {
-              Get.toNamed('/styles_styles_index');
+              Get.toNamed(RouteNames.stylesStylesIndex);
             },
             child: Text('按钮')));
   }
