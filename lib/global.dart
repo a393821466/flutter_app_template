@@ -7,12 +7,13 @@ import 'common/index.dart';
 // 全局配置
 class Global {
   static Future<void> init() async {
-    WidgetsFlutterBinding.ensureInitialized();
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
     // kv缓存初始化
     await Storage().init();
     // dio初始化
     Get.put<ApiUtilsService>(ApiUtilsService());
+    // 版本化
     await Future.wait([
       Get.putAsync<ConfigService>(() async => await ConfigService().init()),
     ]).whenComplete(() {});
