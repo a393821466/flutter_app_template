@@ -5,6 +5,10 @@ import 'package:flutter_shop_commerce_getx_learn/global.dart';
 import 'package:flutter_shop_commerce_getx_learn/common/style/theme.dart';
 import 'package:flutter_shop_commerce_getx_learn/common/i18n/translation.dart';
 
+import 'common/routers/names.dart';
+import 'common/routers/pages.dart';
+import 'common/services/config.dart';
+
 void main() async {
   await Global.init();
   runApp(const MyApp());
